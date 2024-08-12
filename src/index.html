@@ -7,6 +7,7 @@
   <link href="./output.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="media.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="shortcut icon"
     href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAATlBMVEXtGzTtDi3sABzxYGzxa3bsACHxZXDsABrsACT2qrD////zfIbsABHyd4H3sLX6y87vS1rvRFT+9PX83uDtCSruJz384ePuLEHtGDLzho5vvgwrAAAAa0lEQVR4AWKgBhgFgPLm4gBAKAQAKNj+7th/ULt1A9+JBvE7nhVlVe9x3TTttdf1hFCGc4iMEyK6S7MmE6lY2zIl5/jaRE1mxlqzBOr21XlLDiE6uEmMb21LWYIn16Ym5wZaB18SOocJ/mcEaYwEx1NEBKQAAAAASUVORK5CYII=">
@@ -20,7 +21,233 @@
     alt="">
 
 
-  <div id="slidrr" class="relative w-full overflow-hidden sliderrr">
+
+  <header dir="rtl" class='flex py-4 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
+    <div class='flex flex-wrap items-center gap-5 w-full '>
+
+      <a href="javascript:void(0)"><img src="/assets/img/logo.svg" alt="logo" style="width: 108px;">
+      </a>
+
+
+
+      <div class='flex lg:ml-auto max-lg:w-full'>
+        <div
+          class='flex xl:w-80 max-xl:w-full bg-gray-100 px-6 py-3 rounded outline outline-transparent focus-within:outline-[#ff1900] focus-within:bg-transparent'>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 192.904 192.904" width="16px"
+            class="cursor-pointer fill-gray-400 text-right">
+            <path
+              d="m190.707 180.101-47.078-47.077c11.702-14.072 18.752-32.142 18.752-51.831C162.381 36.423 125.959 0 81.191 0 36.422 0 0 36.423 0 81.193c0 44.767 36.422 81.187 81.191 81.187 19.688 0 37.759-7.049 51.831-18.751l47.079 47.078a7.474 7.474 0 0 0 5.303 2.197 7.498 7.498 0 0 0 5.303-12.803zM15 81.193C15 44.694 44.693 15 81.191 15c36.497 0 66.189 29.694 66.189 66.193 0 36.496-29.692 66.187-66.189 66.187C44.693 147.38 15 117.689 15 81.193z">
+            </path>
+          </svg>
+          <input type='text' placeholder='جستجو ...' class='w-full text-sm bg-transparent rounded outline-none pr-2' />
+
+        </div>
+      </div>
+
+      <div id="log" class="flex items-center justify-center gap-4 ">
+        <button
+          class="px-4 py-2 border flex gap-2 border-slate-200  rounded-lg text-black  hover:shadow transition duration-150">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="size-6 w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+          </svg>
+
+          <span>ورود | ثبت نام</span>
+        </button>
+
+
+        <button
+          class="px-4 py-2 border flex gap-3 border-r-2 border-t-0 border-b-0 border-l-0   text-black   transition duration-150 pr-5">
+          <img src="/assets/img/2849824-basket-buy-market-multimedia-shop-shopping-store_107977(1).png" alt=""
+            class="size-8 w-7 h-7">
+
+
+        </button>
+      </div>
+
+
+
+    </div>
+
+  </header>
+
+
+
+
+
+
+  <!--navbar-->
+
+  <nav class="nav relative">
+    <div class="wrapper container1 mt-4 ">
+
+
+      <ul class="nav-list">
+        <div class="top">
+          <label for="" class="btn close-btn"><i class='bx bx-x'></i></label>
+        </div>
+
+
+        <li>
+          <a href="" class="desktop-item ">دسته‌بندی کالاها <span><i class='bx bx-chevron-down'></i></span></a>
+          <input type="checkbox" id="showMega" />
+          <label for="showMega" class="mobile-item">دسته‌بندی کالاها <span><i class='bx bx-chevron-down'></i></label>
+          <div class="mega-box text-right flex rounded-b-lg shadow-2xl ">
+            <div class=" overflow-auto "
+              style="width: 16.5%;height: 100%;overflow-y: auto;direction: rtl;text-align: right;background-color: #f2f4f7;">
+              <ul style="">
+                <li style="height: 65px;padding-right: 1.5rem;margin-top: 2%;margin-top: -15%;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+                <li style="height: 65px;padding-right: 1.5rem;">دسته‌بندی کالاها</li>
+
+              </ul>
+            </div>
+            <div
+              style="width: 83.5%;height: 100%;overflow-y: auto;direction: rtl;text-align: right;display: flex;background-color: white;">
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+              <div>
+                <ul>
+                  <li style="height: 65px;padding-right: 2.5rem;margin-top: -15%;" class="font-bold">برندهای مختلف گوشی
+                    موبایل > </li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center font-normal"> دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+                  <li style="height: 55px;padding-right: 2.5rem;margin-bottom: 1%;color: #81848a;"
+                    class="text-start justify-center">دسته‌بندی کالاها</li>
+
+
+                </ul>
+              </div>
+
+
+
+            </div>
+
+
+
+
+
+
+          </div>
+          <div>
+        </li>
+
+        <li style="color: #73777d;"><a href="">شگفت‌انگیزها</a></li>
+        <li style="color: #73777d;"><a href="">سوپرمارکت</a></li>
+        <li style="color: #73777d;"><a href="">کارت هدیه</a></li>
+        <li style="color: #73777d;"><a href=""> پرفروش‌ترین‌ها</a></li>
+        <li style="color: #73777d;"><a href="">تخفیف‌ها و پیشنهادها</a></li>
+        <li style="color: #73777d;"><a href="">سوالی دارید؟</a></li>
+        <li style="color: #73777d;"><a href="">در دیجی‌کالا بفروشید!</a></li>
+    </div>
+
+    <!--  <li>
+              <a href="" class="desktop-item">Page <span><i class='bx bx-chevron-down'></i> </a>
+                <input type="checkbox"  id="showdrop2">
+                <label for="showdrop2" class="mobile-item">Page <span><i class='bx bx-chevron-down'></i></label>
+                  <ul class="drop-menu2">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Faq</a></li>
+                    <li><a href="">Page 404</a></li>
+                  </ul>
+              </li>
+              -->
+    <li class="icons">
+      <a href="cart.html">
+
+      </a>
+
+    </li>
+    </ul>
+    <hr>
+
+
+
+    </div>
+  </nav>
+
+
+
+
+
+  <div style="margin-top: -3.6%;" id="slidrr" class="relative w-full overflow-hidden sliderrr">
     <!-- Slider container -->
     <div id="slider" class="flex transition-transform duration-500 ease-out">
       <!-- Slide 1 -->
@@ -83,6 +310,483 @@
   </script>
 
 
+
+  <div style="width: 80%; margin: 3% auto;" class="container-2xl-w mx-auto lg:px-4 2xl:px-0">
+    <div id="over"
+      class="w-full lg:py-2 bg-neutral-000 lg:items-start flex-wrap lg:justify-around flex overflow-x-auto flex-nowrap overflow-x-auto hide-scrollbar">
+      <a class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="دیجی&zwnj;کالا جت" target="_blank"
+        href="https://api.digikala.com/v1/user/sso-redirect/?redirect_url=https://www.digikalajet.com/?utm_source%3Ddigikala%26utm_medium%3Dcircle_badge%26utm_campaign%3Djet%26promo_name%3Djet%26promo_position%3Dcircle_badge">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/787a330f980d0cb7583d5d3316a868757535ea79_1708970899.png"
+            width="52" height="52" alt="دیجی&zwnj;کالا جت" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">دیجی&zwnj;کالا
+          جت</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="دریافت وام" target="_blank" href="/my-digipay/?inapp=1&amp;hideShare=1&amp;action=408">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/ac127167132653d14c758748b07824a6a7643a31_1708971047.png"
+            width="52" height="52" alt="دریافت وام" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">دریافت
+          وام</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="شگفت&zwnj;های سوپرمارکتی" target="_blank" href="/fresh-offers/">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/7afdc3eb2e7187211bca4824b22ca78e0cb36c15_1722241127.png"
+            width="52" height="52" alt="شگفت&zwnj;های سوپرمارکتی" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">شگفت&zwnj;های
+          سوپرمارکتی</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="دیجی&zwnj;پلاس" target="_blank" href="/landing/mordad36monthdisc/">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/c13bd207cfaf3009e063e010dc4234eef96b1d13_1708971660.png"
+            width="52" height="52" alt="دیجی&zwnj;پلاس" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">دیجی&zwnj;پلاس</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="حراج پایان فصل" target="_blank" href="https://www.digistyle.com/landings/outlet/">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/ab76336c9eacf347728511add3cb6c2edc3f5396_1723017732.jpg"
+            width="52" height="52" alt="حراج پایان فصل" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">
+          پایان فصل</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="موبایل کارکرده" target="_blank"
+        href="https://used.digikala.com/?mtm_campaign=DKHPBADGE&amp;mtm_source=DKHP&amp;mtm_medium=BADGE&amp;mtm_cid=DK-HP-BADGE">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/d0dc0edf879e963e9cff31fd57b3f101743ddac8_1707297619.png"
+            width="52" height="52" alt="موبایل کارکرده" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">موبایل
+          کارکرده</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="فروشگاه حضوری" target="_blank" href="https://about.digikala.com/digikala-shop/">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/7493e66e491c18d699274a48a53a9dfcb8aa2e93_1717230600.png"
+            width="52" height="52" alt="فروشگاه حضوری" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">فروشگاه
+          حضوری</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="سوپرمارکت پرتخفیف" target="_blank" href="/main/food-beverage/">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/afb3c938fd3149d7587b59919bfc500a461693a6_1709571657.png"
+            width="52" height="52" alt="سوپرمارکت پرتخفیف" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">سوپرمارکت
+          پرتخفیف</span>
+      </a><a
+        class="flex flex-col items-center user-select-none my-2 lg:my-0 lg:w-35 w-1/8 shrink-0 lg:!w-[82px] w-[75px]"
+        data-cro-id="دیجی&zwnj;کالا مهر" target="_blank"
+        href="/mehr/?utm_source=DigikalaOnsite&amp;utm_medium=circlebadge&amp;utm_campaign=DailyCirclebadge">
+        <div style="width: 52px; height: 52px; line-height: 0;"><img class="w-full inline-block"
+            src="https://dkstatics-public.digikala.com/digikala-bellatrix/98d35f5e1706a907fe3f9019d907e3d031a6402e_1719843669.png"
+            width="52" height="52" alt="دیجی&zwnj;کالا مهر" title="" style="object-fit: contain;"></div><span
+          class="text-caption-strong text-neutral-700 mt-1 text-center px-3 lg:px-4">دیجی&zwnj;کالا
+          مهر</span>
+      </a>
+
+    </div>
+    <div class="lg:hidden mx-auto w-5 h-1 bg-app-background rounded-3xl relative">
+      <div class="w-1/2 h-full rounded-3xl bg-neutral-700 absolute right-0"></div>
+    </div>
+  </div>
+
+
+
+  <!--produkt slider-->
+
+
+
+
+
+
+  <div class=" mx-auto  p-6 overflow-hidden bg-[#e0324e] rounded-2xl"
+    style="width:75%;direction: rtl; margin: 3% auto;">
+    <div class="w-fit gap-3 mx-auto flex story-ul ">
+
+
+      <img id="right-img-story" class="bg-white"
+        src="/assets/img/1904671-arrow-arrow-right-change-direction-next-page-right_122521.png" alt="" style="">
+
+
+      <img id="left-img-story" class="bg-white"
+        src="/assets/img/1904658-arrow-arrow-left-change-direction-left-next-undo_122508.png" alt="" style="">
+
+
+      <!-- item digi-->
+      <div class="w-48 h-[300px]    duration-300  bg-[#e0324e]  ">
+
+        <div class="p-4 ">
+          <img class="rounded-lg  w-24 mx-auto" src="/assets/img/Amazings.svg" />
+        </div>
+
+
+        <h1 class="rounded-lg  w-36 mx-[70px]">timer</h1>
+
+        <div class="p-4">
+          <img class="rounded-lg  w-20 mx-auto" src="/assets/img/Amazing2.svg" alt="">
+        </div>
+
+        <div>
+          <h4 class=" px-4  capitalize text-center  text-white text-sm  font-semibold">مشاهده همه ></h4>
+        </div>
+
+
+
+      </div>
+
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+
+      <!-- card item -->
+      <div class="w-48 h-[300px] shadow-md   duration-300 hover:shadow-xl bg-white">
+        <div class="p-4 ">
+          <img class="rounded-lg  w-28 mx-auto"
+            src="/assets/img/e06e98875ad5947e50811d75ae940a9a38aaa15f_1678627573.webp" />
+        </div>
+        <div class="p-4 capitalize text-right font-medium text-gray-500 text-sm">
+          <h2>هدفون بلوتوثی کیو سی وای مدل T13 TWS
+
+          </h2>
+        </div>
+        <div class="flex justify-between  p-4 capitalize text-xl font-medium">
+          <div style="direction: ltr;" class="flex justify-between gap-x-16">
+            <h3 class="capitalize text-right  text-black text-sm font-medium"> 3,000,000</h3>
+            <h3
+              class="capitalize  font-semibold text-white text-sm bg-red-600 rounded-2xl justify-center w-10 text-center">
+              27%</h3>
+
+          </div>
+          <div>
+          </div>
+        </div>
+        <div>
+          <h4 class=" px-4  capitalize text-left  text-gray-400 text-sm line-through font-medium">3,270,000</h4>
+        </div>
+      </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script>
+    $("#left-img-story").click(function () {
+      $('.story-ul').animate({ 'margin-right': '-=100px' })
+    })
+    $("#right-img-story").click(function () {
+      $('.story-ul').animate({ 'margin-right': '+=100px' })
+
+    })
+
+
+
+
+
+  </script>
 
 
   <!-- Product Promotion Section -->
@@ -699,8 +1403,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">روغن کانولا غنچه</div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2 ">
+        <div class=" popular1 flex items-center space-x-2 ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/113323109.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -708,8 +1411,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">رب گوجه </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2  ">
+        <div class=" popular1 flex items-center space-x-2  ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/e31bfd186d99275c45d189579d0d8456ebd03033_1716900817.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -717,8 +1419,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">رب گوجه </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2 ">
+        <div class=" popular1 flex items-center space-x-2 ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/3544603431acb5e2e64297de22e30b44d635594a_1720519352.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -726,8 +1427,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">آب معدنی میوا </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2  ">
+        <div class=" popular1 flex items-center space-x-2  ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/935e8fb79c0caeb1f2d608643f2cf7a4f9cb7af1_1659508989.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -934,8 +1634,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">روغن کانولا غنچه</div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2   ">
+        <div class=" popular1 flex items-center space-x-2   ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/113323109.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -943,8 +1642,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">رب گوجه </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2 ">
+        <div class=" popular1 flex items-center space-x-2 ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/e31bfd186d99275c45d189579d0d8456ebd03033_1716900817.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -952,8 +1650,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">رب گوجه </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2 ">
+        <div class=" popular1 flex items-center space-x-2 ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/3544603431acb5e2e64297de22e30b44d635594a_1720519352.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -961,8 +1658,7 @@ width: 75%;    margin-top: 2%;
 
           <div class="text-sm">آب معدنی میوا </div>
         </div>
-        <div
-          class=" popular1 flex items-center space-x-2   ">
+        <div class=" popular1 flex items-center space-x-2   ">
           <img
             src="https://dkstatics-public.digikala.com/digikala-products/935e8fb79c0caeb1f2d608643f2cf7a4f9cb7af1_1659508989.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/format,webp/quality,q_80"
             alt="Product Image" class="w-16 h-16 object-cover">
@@ -1135,8 +1831,8 @@ width: 75%;    margin-top: 2%;
       <!-- Top Section: Icons with Text -->
       <div class="flex flex-col md:flex-row justify-between items-center text-gray-700 text-center md:text-right mb-8">
         <div class="flex flex-col items-center mb-6 md:mb-0">
-          <img src="https://www.digikala.com/statics/img/svg/footer/original-products.svg" alt="Certified Icon"
-            class="w-12 h-12 mb-2">
+
+          class="w-12 h-12 mb-2">
           <span>ضمانت اصل بودن کالا</span>
         </div>
         <div class="flex flex-col items-center mb-6 md:mb-0">

@@ -817,6 +817,7 @@ border-radius: 51%;
     top: 907px;
     height: 6%;
       width: 10%;
+      display: none;
     
     border-radius: 51%;
   }
@@ -824,7 +825,7 @@ border-radius: 51%;
   
   @media (max-width: 460px){
     #left-img-story {
-      display: inline-block;
+      display: none;
       position: absolute;
       left: 13%;
       top: 907px;
@@ -860,7 +861,9 @@ border-radius: 51%;
 
   
   
-  
+  #look{
+display: none;
+  }
 
 
 #box-story{
@@ -889,3 +892,5 @@ border-radius: 51%;
    font-size: 0.73rem;
   }
   }
+
+    

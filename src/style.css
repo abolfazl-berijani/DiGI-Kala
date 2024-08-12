@@ -1,0 +1,145 @@
+#list h2 {
+  direction: rtl;
+  margin-right: 7%;
+
+}
+
+#list a {
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  color: #19bfd3;
+  padding-bottom: 7%;
+  margin-top: -4%;
+}
+
+.list-img {
+  padding: 43px 58px 28px 45px;
+}
+
+#list h6 {
+  direction: rtl;
+  font-size: small;
+  color: #81858b;
+  margin-right: 7%;
+}
+
+#list-item div img {
+  padding-right: 10%;
+}
+
+@font-face {
+  font-family: abolfazl;
+  src: url(/assets/iranyekan/Qs_Iranyekan.ttf);
+}
+
+#list1 h2 {
+  direction: rtl;
+  margin-right: 7%;
+
+}
+
+#list1 a {
+  align-items: center;
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  color: #19bfd3;
+  padding-bottom: 7%;
+  margin-top: -4%;
+}
+
+#list1 h6 {
+  direction: rtl;
+  font-size: small;
+  color: #81858b;
+  margin-right: 7%;
+}
+
+#list3 img {
+
+  width: 50%;
+  margin-left: 25%;
+}
+
+#list3 p {
+
+  text-align: left;
+}
+
+#event {
+  max-width: 79%;
+  background: linear-gradient(76.02deg, #35a6c8 33.32%, #007295 71.55%), radial-gradient(21.29% 87.33% at 50% 50.67%, #7cf2f6 0, #35a6c8 100%);
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 1s ease-in-out;
+}
+
+.slide {
+  min-width: 11%;
+  box-sizing: border-box;
+}
+#prev1{
+  margin: 7% 0 0 92%;
+}
+#next1{
+  margin: 7% 0 0 0;
+}
+@media screen and (max-width:650px) {
+  #event {
+
+    max-width: 93%;
+  }
+
+}
+
+@media screen and (max-width:780px) {
+  #event {
+
+    max-width: 93%;
+  }
+
+}
+
+@media screen and (max-width:597px) {
+  #img597 {
+    display: none;
+
+  }
+  #lolo {
+
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width:1020px) {
+
+  .slide {
+
+    min-width: 55%;
+  }
+
+}
+
+@media screen and (max-width:1244px) {
+
+  #prev1 {
+
+    margin: 11% 0 0 70%;
+
+  }
+  #next1 {
+
+    margin: 11% 0 0 0;
+
+  }
+
+}
